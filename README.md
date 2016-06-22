@@ -50,10 +50,10 @@ Database Model
 ===============
 
 ####  **Table name: reminder**
-  id int(11) NOT NULL AUTO_INCREMENT
-  message longtext NOT NULL
-  email varchar(255) DEFAULT NULL
-  number int(10) unsigned DEFAULT NULL
-  scheduled_on datetime(6) NOT NULL
-  is_delivered tinyint(1) NOT NULL
-  created datetime(6) NOT NULL
+      id int(11) NOT NULL AUTO_INCREMENT
+      message longtext NOT NULL
+      email varchar(255) DEFAULT NULL
+      number int(10) unsigned DEFAULT NULL
+      scheduled_on datetime(6) NOT NULL
+      is_delivered tinyint(1) NOT NULL
+      created datetime(6) NOT NULL
