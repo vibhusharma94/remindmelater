@@ -1,0 +1,6 @@
+*.pyc
+bin
+env
+media
+migrations
+
