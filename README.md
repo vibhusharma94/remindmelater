@@ -42,5 +42,5 @@ Django SetUP Guide
 #### 10. **Test django app**
       python manage.py test apps.rml -k -v 3
 
-#### 11. **Start celery server**
+#### 11. **Start celery worker**
       celery -A rmlapp worker -B --loglevel=info

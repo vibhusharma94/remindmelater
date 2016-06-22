@@ -7,7 +7,7 @@ def send_notification_async(reminder_id):
     from .models import Reminder
     try:
         reminder = Reminder.objects.get(id=reminder_id)
-    except Exception as e:
+    except Reminder.DoesNotExist as e:
         print e.message
     else:
         # initiate pipline class
