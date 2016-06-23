@@ -23,7 +23,7 @@ class RMLTestCase(APITestCase):
                    "scheduled_on": epoch}
         url = reverse('add-reminder', kwargs={})
         response = self.api_client.post(url, payload, format='json')
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_reminder_failed(self):
         """
