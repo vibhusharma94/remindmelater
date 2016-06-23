@@ -3,7 +3,7 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 from rest_framework.test import APIClient
 from django.core.urlresolvers import reverse
-from .utils import Utilities
+from core.libs.commons.utils import date_to_epoch
 
 
 class RMLTestCase(APITestCase):
@@ -16,7 +16,7 @@ class RMLTestCase(APITestCase):
         Add Reminder success
         """
         scheduled_on = datetime.now() + timedelta(0, 60)  # 60 secs from now
-        epoch = Utilities.date_to_epoch(scheduled_on)
+        epoch = date_to_epoch(scheduled_on)
         payload = {"message": "It's working",
                    "email": "vibhuindian@gmail.com",
                    "number": 7022158873,

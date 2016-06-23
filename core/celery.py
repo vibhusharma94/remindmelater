@@ -1,15 +1,16 @@
 from __future__ import absolute_import
 import os
 from celery import Celery
-default_django_settings_module = "rmlapp.settings.dev"
+from core.libs.commons.utils import get_default_django_settings_module
+
 
 # set the default Django settings module for the 'celery' program.
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", default_django_settings_module)
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", get_default_django_settings_module())
 
 
 from django.conf import settings  # noqa
 
-app = Celery('rmltasks', broker='redis://127.0.0.1:6379/2')
+app = Celery('coretasks', broker='redis://127.0.0.1:6379/2')
 
 
 # Using a string here means the worker will not have to

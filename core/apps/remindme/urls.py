@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, url
-from apps.rml import views
+from apps.remindme import views
 
 urlpatterns = patterns(
     '',

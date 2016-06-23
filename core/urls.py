@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from apps.rml import urls as apis_urls
+from apps.remindme import urls as apis_urls
 
 
 urlpatterns = patterns(

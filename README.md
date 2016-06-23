@@ -40,10 +40,10 @@ Django SetUP Guide
       python manage.py runserver 8000
 
 #### 10. **Test django app**
-      python manage.py test apps.rml -k -v 3
+      python manage.py test apps.remindme -k -v 3
 
 #### 11. **Start celery worker**
-      celery -A rmlapp worker -B --loglevel=info
+      celery -A core worker -B --loglevel=info
 
 
 Database Model

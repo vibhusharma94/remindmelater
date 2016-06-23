@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 import os
 import sys
-default_django_settings_module = "rmlapp.settings.dev"
-
+from core.libs.commons.utils import get_default_django_settings_module
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", default_django_settings_module)
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", get_default_django_settings_module())
 
     from django.core.management import execute_from_command_line
 

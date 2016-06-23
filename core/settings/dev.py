@@ -31,7 +31,7 @@ THIRD_PARTY_APPS = (
 )
 
 LOCAL_APPS = (
-    'apps.rml',
+    'apps.remindme',
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -53,7 +53,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-ROOT_URLCONF = 'rmlapp.urls'
+ROOT_URLCONF = 'core.urls'
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -78,7 +78,7 @@ TEMPLATE_DIRS = (
     normpath(join(DJANGO_ROOT, 'templates')),
 )
 
-WSGI_APPLICATION = 'rmlapp.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
