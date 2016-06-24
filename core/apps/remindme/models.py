@@ -61,6 +61,7 @@ class Channel(models.Model):
     # channel_value could be a Phone number, Email , Android or Ios device id or twiiter username.
     # validation can be done in serializer. This is directly depends on type of channel.
     # e.g in case of android push notification device id and registration key is required.
+    # note: only one c_value might not be sufficient to deliver message.
     c_value = models.CharField(_("Channel Value"), max_length=255)
     # This way we can track delivery status for each channel
     is_delivered = models.BooleanField(default=False)
